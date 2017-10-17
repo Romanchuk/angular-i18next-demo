@@ -1,0 +1,23 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib/",
+  "files.exclude": {
+    "**/api": true,
+    "**/bin": true,
+    "**/dist": true,
+    "**/obj": true,
+    "**/Properties": true,
+    "**/*.js.map": {
+      "when": "$(basename)"
+    },
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/*.css": {
+      "when": "$(basename).scss"
+    },
+    "**/*.cs": true,
+    "**/*.csproj": true,
+    "**/*.csproj.user": true,
+    "**/*.config": true
+  }
+}

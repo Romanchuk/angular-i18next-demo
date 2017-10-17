@@ -1,0 +1,107 @@
+﻿{
+  "required": "Field is required.",
+  "error": "Error occured.",
+  "minValue": "Minimum value.",
+  "maxValue": "Maximum value.",
+  "email": "$t(validation:_fill) valid e-mail.",
+  "pattern": "$t(validation:_fill) valid value.",
+  "maxlength": "Maximum length {{requiredLength}}.",
+
+  "_fill": "Please fill in",
+  "control_specific": {
+    "files": {
+      "arrayMinLength": "$t(validation:_fill) and attach the questionnaire file.",
+      "arrayMaxLength": "Please attach no more than {{arrayMaxLength}} attachments."
+    },
+    "sales-type": {
+      "required": "Please select sales type on website."
+    },
+    "inn": {
+      "required": "$t(validation:_fill) Subagent's TIN.",
+      "error": "Failed to verify TIN.",
+      "inn": "Invalid TIN."
+    },
+    "lawform": {
+      "required": "Please select incorporation form."
+    },
+    "subagentName": {
+      "required": "$t(validation:_fill) Subagent's name."
+    },
+    "websiteAddress": {
+      "required": "$t(validation:_fill) linked website URL.",
+      "occupied": "The linked website's URL is already used in the active application.",
+      "error": "Failed to verify URL accessibility."
+    },
+    "sideClientDeveloper": {
+      "required": "$t(validation:_fill) outsourced designer's name."
+    },
+    "commentary": {
+      "required": "$t(validation:_fill) comment."
+    },
+    "tariff": {
+      "required": "Please select Tariff plan."
+    },
+    "technicalContact": {
+      "firstName": {
+        "required": "$t(validation:_fill) technical specialist's first name."
+      },
+      "lastName": {
+        "required": "$t(validation:_fill) technical specialist's last name."
+      },
+      "middleName": {
+        "required": "$t(validation:_fill) technical specialist's patronymic."
+      },
+      "sex": {
+        "required": "$t(validation:_fill) technical specialist's sex."
+      },
+      "position": {
+        "required": "$t(validation:_fill) technical specialist's position."
+      },
+      "email": {
+        "required": "$t(validation:_fill) technical specialist's e-mail."
+      },
+      "phone": {
+        "required": "$t(validation:_fill) technical specialist's telephone number."
+      },
+      "phoneCountry": {
+        "required": "$t(validation:_fill) technical specialist's telephone code."
+      }
+    },
+    "bankDetails": {
+      "bankName": {
+        "required": "$t(validation:_fill) bank name."
+      },
+      "bankCountry": {
+        "required": "Please select bank's country."
+      },
+      "bankCity": {
+        "required": "Please select bank's city."
+      },
+      "bankAccount": {
+        "required": "$t(validation:_fill) current account.",
+        "account": "Invalid format of current account number."
+      },
+      "bic": {
+        "required": "$t(validation:_fill) BIC.",
+        "bic": "Invalid format of BIC number."
+      },
+      "bankCorrespondentAccount": {
+        "required": "$t(validation:_fill) correspondent account.",
+        "account": "Invalid format of correspondent account number."
+
+      },
+      "correspondentBankName": {
+        "required": "$t(validation:_fill) correspondent bank name."
+      },
+      "correspondentBankCountry": {
+        "required": "Please select correspondent bank's country."
+      },
+      "correspondentBankCity": {
+        "required": "Please select correspondent bank's city."
+      }
+    },
+    "targetMarkets": {
+      "requiredTargetMarkets": "Please enter at least one target market (most reservation requests regions) for your site."
+    }
+  }
+}

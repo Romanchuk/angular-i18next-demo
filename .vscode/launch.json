@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome against localhost, with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3001/",
+            "runtimeArgs": [
+              "--disable-web-security",
+              "--user-data-dir",
+              "--remote-debugging-port=9222"
+            ],
+            "sourceMaps": true,
+            "userDataDir": "${workspaceRoot}/.vscode/chrome"
+            //"webRoot": "${workspaceRoot}/api"
+        },
+        {
+            "name": "Attach to Chrome, with sourcemaps",
+            "type": "chrome",
+            "request": "attach",
+            "url": "http://localhost:3001/",
+            "port": 9222,
+            "sourceMaps": true
+            //"webRoot": "${workspaceRoot}/api"
+            //"webRoot": "${workspaceRoot}/api/api.js"
+        },
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "Launch via NPM",
+          "runtimeExecutable": "npm",
+          "windows": {
+            "runtimeExecutable": "npm.cmd"
+          },
+          "runtimeArgs": [
+            "run-script",
+            "debug"
+          ],
+          "port": 5858,
+          "cwd": "${workspaceRoot}"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="icon" type="image/ico" href="favicon.ico" />
+  <!-- base url -->
+  <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
+
+  <% if (webpackConfig.htmlElements.headTags) { %>
+  <!-- Configured Head Tags  -->
+  <%= webpackConfig.htmlElements.headTags %>
+  <% } %>
+</head>
+
+<body class="s7-request-api">
+
+  <app>
+    <style type="text/css">*{outline:0!important}.app-loader{display:table;height:100vh;width:100%}.app-loader .loader-pusher{display:table-cell;text-align:center;vertical-align:middle}.app-loader .loader-pusher .spinner{background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzgiIGhlaWdodD0iMzgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTkiIGN5PSIxOSIgcj0iMTQiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMTkuMDA1IDNjLTguODM5IDAtMTYuMDA1IDcuMTY2LTE2LjAwNSAxNi4wMDIgMCA4Ljg0MSA3LjE2NiAxNS45OTggMTYuMDA1IDE1Ljk5OCA4LjgzOCAwIDE1Ljk5NS03LjE1NyAxNS45OTUtMTUuOTk4IDAtOC44MzYtNy4xNTctMTYuMDAyLTE1Ljk5NS0xNi4wMDJ6bTEuMDA0IDcuOTgyYy0uMTQyLjM4Ny0uNDc0IDEuMjY4LS42MzQgMS42MjItLjE0MS4zNTItLjMuNDktLjc3NS40OWgtMS4wMmMtMS42NzUgMC0yLjc0Ny4wNzItMy4zMy4yNjQtLjU2My4xNzctMS4wMDYuNDc0LTEuMjM1LjgxMS0uMjEyLjI2NS0uMjguNjMxLS4yOC45NTIgMCAuMzMyLjAzNS42NTEuMzY4IDEuMDc0LjQwNi40MDYgMS4wNzUuOTM0IDIuMzk1IDEuNzQ0IDIuNjI4IDEuNjM3IDMuNDAzIDIuOTM5IDMuNDAzIDQuNjQ4IDAgMi43ODQtMi42MjYgNS40NDYtNy4wMyA1LjQ0Ni0xLjMxOSAwLTMuMTcxLS4xOTYtMy45NDUtLjQ0MS0uMjY0LS4xMjItLjMzNS0uMjY0LS4yMjctLjY4Ny4xNTgtLjUzMS4zMzItLjk4Ni41NjItMS42MDQuMTA2LS4zLjI4NC0uNDIyLjU4Mi0uMzM0Ljg2My4yMSAyLjIxNy4zMzQgMy4xMTcuMzM0IDIuNTc1IDAgMy41NzUtMS4xNjIgMy41NzUtMi4xODMgMC0uOTMzLS41MDgtMS40NDYtMy4wNjUtMi45OTQtMi4zOTUtMS40OC0zLjIyMi0yLjc2Ni0zLjIyMi00LjU0NCAwLTIuMTMyIDEuMzczLTMuODIzIDMuMzYyLTQuNTk4IDEuMTgxLS40NDIgMi44Mi0uNTgxIDUuMzQtLjU4MWgxLjcyN2MuMjYyLjAwMS41MjcuMTIxLjMzMi41ODF6bTkuNzE2LS4wMzdjLS41MTEgMS4yNjgtNC4zMjQgOS43OTQtNC44MzMgMTAuOTYtLjE3OC40MjEtLjM3Mi41MDgtLjgxMy41MDhoLTEuOTJjLS4yNjQgMC0uMzY5LS4xOTQtLjIyNi0uNTA4LjEwNC0uMjY2IDMuMzI4LTcuMzk4IDMuOTYtOC44NDYtLjQzNiAwLTEuMDM5LjAzNS0yLjc4Mi4wMzVoLTEuNjI0Yy0uMjYgMC0uMzY3LS4yNDUtLjI2LS41MDkuMDg3LS4zMzUuNTI2LTEuNDEuNTk4LTEuNjc1LjE3Ni0uMzg4LjM2OC0uNTA4Ljc0MS0uNTA4aDYuODYxYy4zNjkuMDAxLjQzOS4yNjMuMjk4LjU0NHoiIGZpbGw9IiNiZGQwMTMiLz48L3N2Zz4=) 0 0/cover no-repeat;display:inline-block;height:100px;position:relative;width:100px}.app-loader .loader-pusher .spinner .spinner-tail{-webkit-animation:spinner .86s linear infinite;animation:spinner .86s linear infinite;background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzgiIGhlaWdodD0iMzgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSI4LjA0MiUiIHkxPSIwJSIgeDI9IjY1LjY4MiUiIHkyPSIyMy44NjUlIiBpZD0iYSI+PHN0b3Agc3RvcC1jb2xvcj0iI2JlYmViZSIgc3RvcC1vcGFjaXR5PSIwIiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2JlYmViZSIgc3RvcC1vcGFjaXR5PSIuNjMxIiBvZmZzZXQ9IjYzLjE0NiUiLz48c3RvcCBzdG9wLWNvbG9yPSIjYmViZWJlIiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMzYgMThjMC05Ljk0LTguMDYtMTgtMTgtMTgiIHN0cm9rZT0idXJsKCNhKSIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBmaWxsPSIjYmViZWJlIiBjeD0iMzYiIGN5PSIxOCIgcj0iMSIvPjwvZz48L3N2Zz4=) 0 0/cover no-repeat;bottom:0;left:0;position:absolute;right:0;top:0}@-webkit-keyframes spinner{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes spinner{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style>
+    <div class="app-loader">
+      <div class="loader-pusher">
+        <div class="spinner">
+          <div class="spinner-tail"></div>
+        </div>
+      </div>
+    </div>
+  </app>
+
+
+  <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+  <!-- Webpack Dev Server reload -->
+  <script src="/webpack-dev-server.js"></script>
+  <% } %>
+
+
+</body>
+</html>

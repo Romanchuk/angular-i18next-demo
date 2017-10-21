@@ -1,0 +1,13 @@
+﻿<div>
+    <form class="form-inline">
+        <div class="form-group">
+            <span>{{ 'parametrized_string' | i18next: { value: value, str: str } }}</span>
+        </div>
+        <div class="form-group mx-sm-3">
+            <input name="number" type="number" class="form-control" [(ngModel)]="value">
+        </div>
+        <div class="form-group mx-sm-3">
+            <input name="str" type="text" class="form-control" [(ngModel)]="str">
+        </div>
+    </form>
+</div>

@@ -25,6 +25,7 @@ import { AppFooterComponent } from './structure/app-footer.component';
 import { AppErrorComponent } from './structure/app-error.component';
 import { HeaderLanguageComponent } from './structure/header-controls/header.language.component';
 import { AccessDeniedComponent } from './content/access-denied/access-denied.component';
+import { SimpleDemoComponent } from './content/simple-demo.component';
 
 
 
@@ -104,11 +105,13 @@ type StoreType = {
     AppFooterComponent,
     HeaderLanguageComponent,
     AppErrorComponent,
+    SimpleDemoComponent,
     AccessDeniedComponent
   ],
   imports: [ // import Angular's modules
     //core
     BrowserModule,
+    FormsModule,
     //lib
     I18NextModule.forRoot(),
     

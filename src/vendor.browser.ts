@@ -19,11 +19,6 @@ import '@angularclass/hmr';
 
 
 //https://github.com/AngularClass/angular2-webpack-starter/issues/696
-import 'jquery'; // todo: избивиться от jquery
-
-
-import 'alertify/themes/alertify.core.css';
-import 'alertify/themes/alertify.bootstrap.css';
 
 
 // RxJS

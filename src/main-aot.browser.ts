@@ -1,4 +1,4 @@
-import { AppModuleNgFactory } from '.';
+import { AppModuleNgFactory } from './../aot/src/app/AppModule.ngfactory';
 /*
  * Angular bootstraping
  */
@@ -18,7 +18,7 @@ import { AppModule } from './app/AppModule';
  */
 export function main(): Promise<any> {
   return platformBrowserDynamic()
-    .bootstrapModule(AppModule)
+    .bootstrapModuleFactory(AppModuleNgFactory)
     .then(decorateModuleRef)
     .catch(err => console.error(err));
 }

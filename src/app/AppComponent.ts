@@ -22,7 +22,7 @@ export class AppComponent implements OnInit  {
   loading: boolean = true;
   start: number = 0;
   constructor(private router: Router,
-              private title: Title,            
+              private title: Title,
               @Inject(I18NEXT_SERVICE) private i18NextService: ITranslationService) {
       // spinner/loader subscription
       router.events

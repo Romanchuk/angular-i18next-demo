@@ -35,10 +35,7 @@ const i18nextOptions = {
   ns: [
     'translation',
     'validation',
-    'error',
-    'select2',
-    'feature.api01',
-    'FileApi'
+    'error'
   ],
   //backend plugin options
   backend: {
@@ -49,7 +46,6 @@ const i18nextOptions = {
   // lang detection plugin options
   detection: {
     // order and from where user language should be detected
-    // 'querystring' не поддерживается (не находит когда мы работаем с # навигацией)
     order: ['cookie'],
 
     // keys or params to lookup language from

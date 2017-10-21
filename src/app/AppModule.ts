@@ -21,6 +21,7 @@ import { ENV_PROVIDERS } from './environment';
 
 import { AppComponent } from './AppComponent';
 import { AppHeaderComponent } from './structure/app-header.component';
+import { AppFooterComponent } from './structure/app-footer.component';
 import { AppErrorComponent } from './structure/app-error.component';
 import { HeaderLanguageComponent } from './structure/header-controls/header.language.component';
 import { AccessDeniedComponent } from './content/access-denied/access-denied.component';
@@ -100,6 +101,7 @@ type StoreType = {
     //app
     AppComponent,
     AppHeaderComponent,
+    AppFooterComponent,
     HeaderLanguageComponent,
     AppErrorComponent,
     AccessDeniedComponent

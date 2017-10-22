@@ -7,13 +7,8 @@ import { AccessDeniedComponent } from './../content/access-denied/access-denied.
 
 export const appRoutes: Routes = [
   { path: '', component: SimpleDemoComponent },
-
-  //{ path: 'request_list', loadChildren: 'app/features/request_list/RequestListFeatureModule#RequestListFeatureModule' }, //https://www.npmjs.com/package/angular2-router-loader
-  //{ path: 'api01', loadChildren: 'app/features/api01/Api01FeatureModule#Api01FeatureModule' },
-
- // { path: 'api01', loadChildren: loadApi01FeatureModule },
-
-    { path: 'denied', component: AccessDeniedComponent, data: { title: 'error:access_denied' }}
+  { path: 'rich_form', loadChildren: 'app/features/rich_form_feature/RichFormModule#RichFormModule' },
+  { path: 'denied', component: AccessDeniedComponent, data: { title: 'error:access_denied' }}
 ];
 @NgModule({
   imports: [

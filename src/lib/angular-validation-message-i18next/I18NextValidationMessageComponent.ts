@@ -1,9 +1,9 @@
-import { ValidationMessageComponent } from './../validation/components/ValidationMessageComponent';
 import { Component, ViewEncapsulation, Optional, Inject } from '@angular/core';
 import { NgControl, FormControlName, NgForm, FormGroupName, ControlContainer, AbstractControlDirective } from '@angular/forms';
-import { ValidationMessage } from './../validation/components/model/ValidationMessage';
 
 import { I18NEXT_NAMESPACE } from 'angular-i18next';
+import { ValidationMessageComponent } from 'lib/angular-validation-message/components/ValidationMessageComponent';
+import { ValidationMessage } from 'lib/angular-validation-message/components/model/ValidationMessage';
 
 @Component({
     selector: 'i18next-validation-message',

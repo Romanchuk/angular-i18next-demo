@@ -1,37 +1,25 @@
 import { NgModule, ModuleWithProviders, Type } from '@angular/core';
 
-import { ValidationOnBlurDirective } from './directives/ValidationOnBlurDirective';
-import { ValidationMessageDirective } from './directives/ValidationMesageDirective';
+import { I18NextValidationMessageModule } from 'lib/angular-validation-message-i18next/I18NextValidationMessageModule';
 
-import { ValidationErrorBuilder } from './services/validationErrorBuilder/ValidationErrorBuilder';
+import { ValidationOnBlurDirective } from './directives/ValidationOnBlurDirective';
 import { ValidationDirtyChecker } from './services/ValidationDirtyChecker';
 
-import { ValidationMessageComponent } from './components/ValidationMessageComponent';
-
 export const declarations = [
-  ValidationOnBlurDirective,
-  ValidationMessageDirective,
-  ValidationMessageComponent
+  ValidationOnBlurDirective
 ];
 
 @NgModule({
   declarations: declarations,
   exports: declarations,
-  entryComponents: [
-    ValidationMessageComponent
-  ]
+  imports: [I18NextValidationMessageModule]
 })
 export class ValidationModule {
   static forRoot(): ModuleWithProviders {
       return {
         ngModule: ValidationModule,
         providers: [
-          ValidationErrorBuilder,
-          ValidationDirtyChecker,
-          {
-            provide: ValidationMessageComponent,
-            useValue: ValidationMessageComponent
-          }
+          ValidationDirtyChecker
         ]
       };
     }

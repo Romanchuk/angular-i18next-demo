@@ -1,6 +1,8 @@
 ﻿{
     "application_title": "Демо: angular-i18next",
     "intro": "Данная страница демонстрирует интеграцию библиотеки i18next с angular. Вы можете сменить язык в шапке.",
+    "case_demo_title": "$t(case_demo)",
+    "case_demo": "проснись и пой, мистер Фримэн",
     "parametrized_string": "Я параметризованная строка значением: {{value}} и строкой: '{{str}}'",
     "_languages": {
         "ru": "Русский",

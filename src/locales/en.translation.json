@@ -1,6 +1,8 @@
 ﻿{
     "application_title": "Demo: angular-i18next",
-    "intro": "This page is demonstrating itegraion of i18next library with angular. You can switch language in the navbar.",
+    "intro": "This page is demonstrating itegration of i18next library with angular. You can switch language in the navbar.",
+    "case_demo_title": "$t(case_demo)",
+    "case_demo": "rise and shine, Mr.Freeman",
     "parametrized_string": "I am parametrized sting with a value: {{value}} and a string: '{{str}}'",
     "_languages": {
         "ru": "Русский",

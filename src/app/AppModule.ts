@@ -37,7 +37,9 @@ const i18nextOptions = {
   ns: [
     'translation',
     'validation',
-    'error'
+    'error',
+
+    'feature.rich_form'
   ],
   //backend plugin options
   backend: {

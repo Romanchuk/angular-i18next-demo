@@ -7,7 +7,7 @@ import { AccessDeniedComponent } from './../content/access-denied/access-denied.
 
 export const appRoutes: Routes = [
   { path: '', component: SimpleDemoComponent },
-  { path: 'rich_form', loadChildren: 'app/features/rich_form_feature/RichFormModule#RichFormModule' },
+  { path: 'rich_form', loadChildren: 'app/features/rich_form_feature/RichFormFeatureModule#RichFormFeatureModule' },
   { path: 'denied', component: AccessDeniedComponent, data: { title: 'error:access_denied' }}
 ];
 @NgModule({

@@ -24,11 +24,11 @@ import { RichFormComponent } from './rich-form.component';
     FormsModule,
     ReactiveFormsModule,
     //feature
-    RichFormFeatureRouterModule
+    RichFormFeatureRouterModule,
 
     //lib
-    //I18NextModule,
-    //I18NextValidationMessageModule,
+    I18NextModule,
+    I18NextValidationMessageModule,
   ],
   entryComponents: [
   ]

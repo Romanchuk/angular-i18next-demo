@@ -34,14 +34,6 @@ export class I18NextValidationMessageComponent extends ValidationMessageComponen
     super(formControlName, formGroupName);
   }
 
-  get firstMessage(): ValidationMessage {
-    return this.firstMessage;
-  }
-
-  get controlPath(): string {
-    return this.controlPath;
-  }
-
   get i18nextKey(): string | string[] {
     if (!this.firstMessage.key)
       return '';

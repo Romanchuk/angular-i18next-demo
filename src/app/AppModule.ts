@@ -116,8 +116,6 @@ type StoreType = {
     FormsModule,
     //lib
     I18NextModule.forRoot(),
-    
-    ValidationModule.forRoot(),
     //app
     AppRouterModule
   ],

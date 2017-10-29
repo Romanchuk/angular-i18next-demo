@@ -1,6 +1,7 @@
 ﻿import { RichFormModel } from './rich-form.model';
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { ValidationDirtyChecker } from '../../../lib/validation/services/ValidationDirtyChecker';
 
 @Component({
   selector: 'rich-form',
@@ -12,7 +13,7 @@ export class RichFormComponent implements OnInit {
   form: FormGroup;
   model: RichFormModel = new RichFormModel();
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder, private vdc: ValidationDirtyChecker){
     this.form = this.fb.group({
       'count': [this.model.count, [Validators.min(1), Validators.max(3)]],
       'email': [this.model.email, [Validators.email]],
@@ -26,7 +27,14 @@ export class RichFormComponent implements OnInit {
 
 
   ngOnInit() {
-    
+
   }
 
+  onSubmit(e: Event) {
+    this.form.controls['technicalContact'].updateValueAndValidity();
+
+    if (!this.form.valid) {
+      this.vdc.markControlsDirty(this.form);
+    }
+  }
 }

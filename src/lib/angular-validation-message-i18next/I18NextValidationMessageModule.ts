@@ -12,18 +12,18 @@ export const declarations = [
 ];
 
 @NgModule({
-  providers: [
-    {
-      provide: ValidationMessageComponent,
-      useValue: I18NextValidationMessageComponent
-    }
-  ],
   declarations: declarations,
   exports: declarations,
   entryComponents: declarations,
   imports: [
     I18NextModule,
     ValidationMessageModule
+  ],
+  providers: [
+    {
+      provide: ValidationMessageComponent,
+      useValue: I18NextValidationMessageComponent
+    }
   ]
 })
 export class I18NextValidationMessageModule {}

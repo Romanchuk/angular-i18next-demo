@@ -1,6 +1,6 @@
 ﻿<div>
     <div class="main-header">
-        <h2>{{ 'title' | i18next: { case: 'cap' } }}</h2>
+        <h1>{{ 'title' | i18next: { case: 'cap' } }}</h1>
     </div>
     <br/>
     <form #requestHtmlForm class="form-default" name="requestHtmlForm" [formGroup]="form" (ngSubmit)="onSubmit($event)">
@@ -30,13 +30,13 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label class="control-label control-label-sm text-muted">{{ '_person.last_name' | i18next: { case: 'cap' } }}</label>
-                        <input validate-onblur validation-message class="form-control" stringMask type="text" formControlName="lastName" [(ngModel)]="model.technicalContact.lastName" />
+                        <input validate-onblur validation-message class="form-control" type="text" formControlName="lastName" [(ngModel)]="model.technicalContact.lastName" />
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-group">
                         <label class="control-label control-label-sm text-muted">{{ '_person.first_name' | i18next: { case: 'cap' } }}</label>
-                        <input validate-onblur validation-message class="form-control" stringMask type="text" formControlName="firstName" [(ngModel)]="model.technicalContact.firstName">
+                        <input validate-onblur validation-message class="form-control" type="text" formControlName="firstName" [(ngModel)]="model.technicalContact.firstName">
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label class="control-label control-label-sm text-muted">{{ '_person.middle_name' | i18next: { case: 'cap' } }}</label>
-                        <input validate-onblur validation-message class="form-control" stringMask type="text" formControlName="middleName" [(ngModel)]="model.technicalContact.middleName">
+                        <input validate-onblur validation-message class="form-control" type="text" formControlName="middleName" [(ngModel)]="model.technicalContact.middleName">
                     </div>
                 </div>
                 <div class="col-6">

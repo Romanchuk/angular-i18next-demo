@@ -12,6 +12,8 @@ import { I18NEXT_SERVICE, ITranslationService } from 'angular-i18next';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/filter';
 
+import 'assets/ng-validation.css';
+
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,

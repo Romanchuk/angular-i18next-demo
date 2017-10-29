@@ -16,19 +16,14 @@ export const declarations = [
   exports: declarations,
   entryComponents: [
     ValidationMessageComponent
+  ],
+  providers: [
+    ValidationErrorBuilder,
+    {
+      provide: ValidationMessageComponent,
+      useValue: ValidationMessageComponent
+    }
   ]
 })
 export class ValidationMessageModule {
-  static forRoot(): ModuleWithProviders {
-      return {
-        ngModule: ValidationMessageModule,
-        providers: [
-          ValidationErrorBuilder,
-          {
-            provide: ValidationMessageComponent,
-            useValue: ValidationMessageComponent
-          }
-        ]
-      };
-    }
 }

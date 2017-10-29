@@ -1,5 +1,5 @@
-import { I18NextService } from 'angular-i18next';
-import { Component, ViewEncapsulation } from '@angular/core';
+import { ITranslationService, I18NEXT_SERVICE } from 'angular-i18next';
+import { Component, ViewEncapsulation, Inject } from '@angular/core';
 
 @Component({
   selector: 'header-language',
@@ -15,7 +15,7 @@ export class HeaderLanguageComponent {
   languages: string[] = ['ru', 'en'];
 
   constructor(
-    private i18NextService: I18NextService,
+    @Inject(I18NEXT_SERVICE) private i18NextService: ITranslationService
   )
   {}
 

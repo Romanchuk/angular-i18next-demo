@@ -3,8 +3,8 @@
     "technical_contact": "технический контакт",
     "count": "кол-во",
     "_person": {
-        "firstName": "имя",
-        "lastName": "фамилия",
-        "middleName": "отчество"
+        "first_name": "имя",
+        "last_name": "фамилия",
+        "middle_name": "отчество"
     }
 }

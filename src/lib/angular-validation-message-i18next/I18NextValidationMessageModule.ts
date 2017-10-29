@@ -2,13 +2,20 @@
 import { NgModule, ModuleWithProviders, Type } from '@angular/core';
 import { I18NextModule } from 'angular-i18next';
 
-import { ValidationMessageModule } from 'lib/angular-validation-message/ValidationMessageModule';
-import { ValidationMessageComponent } from 'lib/angular-validation-message/components/ValidationMessageComponent';
-import { I18NextValidationMessageComponent } from 'lib/angular-validation-message-i18next/I18NextValidationMessageComponent';
+import { ValidationMessageModule } from '../angular-validation-message/ValidationMessageModule';
+import { ValidationMessageComponent } from '../angular-validation-message/components/ValidationMessageComponent';
+import { I18NextValidationMessageComponent } from './I18NextValidationMessageComponent';
 
 
 export const declarations = [
   I18NextValidationMessageComponent,
+];
+
+export const providers = [
+  {
+    provide: ValidationMessageComponent,
+    useValue: I18NextValidationMessageComponent
+  }
 ];
 
 @NgModule({
@@ -19,11 +26,6 @@ export const declarations = [
     I18NextModule,
     ValidationMessageModule
   ],
-  providers: [
-    {
-      provide: ValidationMessageComponent,
-      useValue: I18NextValidationMessageComponent
-    }
-  ]
+  providers: providers
 })
 export class I18NextValidationMessageModule {}

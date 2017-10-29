@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders, Type } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { ValidationOnBlurDirective } from './directives/ValidationOnBlurDirective';
 import { ValidationDirtyChecker } from './services/ValidationDirtyChecker';
@@ -11,7 +11,6 @@ export const declarations = [
 @NgModule({
   declarations: declarations,
   exports: declarations,
-  imports: [],
   providers: [
     ValidationDirtyChecker
   ]

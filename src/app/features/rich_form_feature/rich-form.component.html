@@ -1,6 +1,6 @@
 ﻿<div>
     <div class="main-header">
-        <h2>{{ '_api_connect_application.application_header' | i18next: { case: 'cap' } }}</h2>
+        <h2>{{ 'title' | i18next: { case: 'cap' } }}</h2>
     </div>
     <br/>
     <form #requestHtmlForm class="form-default" name="requestHtmlForm" [formGroup]="form" (ngSubmit)="onSubmit($event)">
@@ -8,20 +8,20 @@
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
-                    <label class="control-label control-label-sm text-muted">{{'_api_connect_application.site_address' | i18next }}</label>
+                    <label class="control-label control-label-sm text-muted">{{ 'email' | i18nextCap }}</label>
                     <input validate-onblur validation-message name="email" type="email" class="form-control" formControlName="email" [(ngModel)]="model.email" />
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
-                    <label class="control-label control-label-sm text-muted">{{'_api_connect_application.site_address' | i18next }}</label>
+                    <label class="control-label control-label-sm text-muted">{{ 'count' | i18nextCap }}</label>
                     <input validate-onblur validation-message name="count" type="number" class="form-control" formControlName="count" [(ngModel)]="model.count" />
                 </div>
             </div>
         </div>
 
         <div class="form-group">
-            <div>{{ '_api_connect_application.technical_contact_description' | i18next }}</div>
+            <div>{{ 'technical_contact' | i18nextCap }}</div>
         </div>
 
         <div formGroupName="technicalContact">

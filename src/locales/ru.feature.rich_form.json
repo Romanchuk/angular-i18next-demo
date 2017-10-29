@@ -1,3 +1,10 @@
 {
-    "title": "Форма с валидацией"
+    "title": "Форма с валидацией",
+    "technical_contact": "технический контакт",
+    "count": "кол-во",
+    "_person": {
+        "firstName": "имя",
+        "lastName": "фамилия",
+        "middleName": "отчество"
+    }
 }

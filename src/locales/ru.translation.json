@@ -6,6 +6,7 @@
     "case_demo_title": "демонстрация опции 'case'",
     "case_demo": "проснись и пой, мистер Фримэн",
     "parametrized_string": "Я параметризованная строка значением: {{value}} и строкой: '{{str}}'",
+    "email": "email адрес",
     "_languages": {
         "ru": "Русский",
         "en": "English"

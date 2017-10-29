@@ -1,5 +1,3 @@
-import { I18NextValidationMessageModule } from './../lib/angular-validation-i18next/I18NextValidationMessageModule';
-import { ValidationModule } from './../lib/validation/ValidationModule';
 import { NgModule, ApplicationRef, APP_INITIALIZER, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder } from '@angular/forms';

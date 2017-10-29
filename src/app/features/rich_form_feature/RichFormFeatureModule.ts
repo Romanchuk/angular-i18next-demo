@@ -33,7 +33,7 @@ import { ValidationMessage } from '../../../lib/angular-validation-message/compo
     I18NextModule,
     ValidationModule,
     ValidationMessageModule,
-    //I18NextValidationMessageModule,
+    I18NextValidationMessageModule,
   ],
   entryComponents: [
   ]

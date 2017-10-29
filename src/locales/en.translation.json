@@ -1,6 +1,6 @@
 ﻿{
     "application_title": "Demo: angular-i18next",
-    "intro": "This page is demonstrating itegration of i18next library with angular. You can switch language in the navbar.",
+    "intro": "This application is demonstrating itegration of i18next library with angular. You can switch language in the navbar.",
     "simple_demo": "Simple demo",
     "parametrized_string_title": "parametrized string demo",
     "case_demo_title": "i18next pipe 'case' option demo",

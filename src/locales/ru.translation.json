@@ -10,5 +10,8 @@
     "_languages": {
         "ru": "Русский",
         "en": "English"
+    },
+    "_buttons": {
+        "send": "отправить"
     }
 }

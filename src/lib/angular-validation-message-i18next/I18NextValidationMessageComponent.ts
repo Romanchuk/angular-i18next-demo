@@ -29,7 +29,7 @@ export class I18NextValidationMessageComponent extends ValidationMessageComponen
   constructor(
     @Inject(I18NEXT_NAMESPACE) private i18nextNamespace: string,
     @Optional() public formControlName: FormControlName,
-    @Optional() formGroupName: FormGroupName
+    @Optional() public formGroupName: FormGroupName
   ) {
     super(formControlName, formGroupName);
   }

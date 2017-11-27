@@ -41,6 +41,4 @@ export const providers = [
     I18NextValidationMessageModule,
   ]
 })
-export class RichFormFeatureModule {
-
-}
+export class RichFormFeatureModule {}

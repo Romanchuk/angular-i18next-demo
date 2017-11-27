@@ -1,5 +1,6 @@
-import { NgModule }              from '@angular/core';
-import { RouterModule, Routes }  from '@angular/router';
+import { I18NEXT_SERVICE, ITranslationService, I18NextModule, I18NEXT_NAMESPACE_RESOLVER } from 'angular-i18next';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes, ActivatedRouteSnapshot, RouterStateSnapshot }  from '@angular/router';
 
 import { SimpleDemoComponent } from './../content/simple-demo.component';
 import { AppErrorComponent } from './../structure/app-error.component';
@@ -7,7 +8,16 @@ import { AccessDeniedComponent } from './../content/access-denied/access-denied.
 
 export const appRoutes: Routes = [
   { path: '', component: SimpleDemoComponent },
-  { path: 'rich_form', loadChildren: 'app/features/rich_form_feature/RichFormFeatureModule#RichFormFeatureModule' },
+  {
+    path: 'rich_form',
+    loadChildren: 'app/features/rich_form_feature/RichFormFeatureModule#RichFormFeatureModule',
+    data: {
+      i18nextNamespaces: ['feature.rich_form']
+    },
+    resolve: {
+      i18next: I18NEXT_NAMESPACE_RESOLVER
+    }
+ },
   { path: 'denied', component: AccessDeniedComponent, data: { title: 'error:access_denied' }}
 ];
 @NgModule({
@@ -20,4 +30,4 @@ export const appRoutes: Routes = [
   providers: [
   ]
 })
-export class AppRouterModule { }
+export class AppRouterModule {}

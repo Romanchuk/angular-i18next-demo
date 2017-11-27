@@ -37,8 +37,11 @@ const i18nextOptions = {
     'validation',
     'error',
 
-    'feature.rich_form'
+    // 'feature.rich_form'
   ],
+  interpolation: {
+    format: I18NextModule.interpolationFormat()
+  },
   //backend plugin options
   backend: {
     loadPath: function(langs, ns) { // todo: перенести локали каждой фичи к ней в папку
@@ -113,7 +116,7 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     //lib
-    I18NextModule.forRoot(),
+    I18NextModule.forRoot(true),
     //app
     AppRouterModule
   ],

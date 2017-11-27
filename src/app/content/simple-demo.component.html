@@ -40,9 +40,9 @@
                 <tbody>
                     <tr>
                         <td>{{ 'case_demo' | i18next }}</td>
-                        <td>{{ 'case_demo' | i18next: { case: 'capitalize' } }}</td>
-                        <td>{{ 'case_demo' | i18next: { case: 'lowercase' } }}</td>
-                        <td>{{ 'case_demo' | i18next: { case: 'uppercase' } }}</td>
+                        <td>{{ 'case_demo' | i18next: { format: 'capitalize' } }}</td>
+                        <td>{{ 'case_demo' | i18next: { format: 'lowercase' } }}</td>
+                        <td>{{ 'case_demo' | i18next | i18nextFormat: 'uppercase' }}</td>
                     </tr>
                 </tbody>
             </table>

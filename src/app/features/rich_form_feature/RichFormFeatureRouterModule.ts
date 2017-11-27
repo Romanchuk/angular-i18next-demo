@@ -16,4 +16,4 @@ export const appRoutes: Routes = [
   providers: [
   ]
 })
-export class RichFormFeatureRouterModule { }
+export class RichFormFeatureRouterModule {}

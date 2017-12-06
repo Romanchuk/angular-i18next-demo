@@ -7,7 +7,7 @@ import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularcla
 import { AppRouterModule } from './routing/AppRouterModule';
 
 
-import { I18NextModule, I18NextService, I18NEXT_SERVICE, ITranslationService } from 'angular-i18next';
+import { I18NextModule, I18NextService, I18NEXT_SERVICE, ITranslationService, I18NextLoadResult, StrictErrorHandlingStrategy, NativeErrorHandlingStrategy } from 'angular-i18next';
 import * as i18nextXHRBackend from 'i18next-xhr-backend';
 import * as i18nextLanguageDetector from 'i18next-browser-languagedetector';
 
@@ -25,11 +25,9 @@ import { HeaderLanguageComponent } from './structure/header-controls/header.lang
 import { AccessDeniedComponent } from './content/access-denied/access-denied.component';
 import { SimpleDemoComponent } from './content/simple-demo.component';
 
-
-
 const i18nextOptions = {
-  whitelist: ['en', 'ru'],
-  fallbackLng: 'ru',
+  // whitelist: ['en', 'ru'],
+  // fallbackLng: 'en',
   debug: true, // set debug?
   returnEmptyString: false,
   ns: [
@@ -66,10 +64,13 @@ const i18nextOptions = {
 };
 
 export function appInit(i18next: ITranslationService) {
-  return () => i18next
-    .use(i18nextXHRBackend)
-    .use(i18nextLanguageDetector)
-    .init(i18nextOptions);
+  return () => {
+    let promise: Promise<I18NextLoadResult> = i18next
+      .use(i18nextXHRBackend)
+      .use(i18nextLanguageDetector)
+      .init(i18nextOptions);
+    return promise;
+  };
 }
 
 export function localeIdFactory(i18next: ITranslationService)  {
@@ -116,7 +117,10 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     //lib
-    I18NextModule.forRoot(true),
+    I18NextModule.forRoot({
+      localizeTitle: true,
+      // errorHandlingStrategy: StrictErrorHandlingStrategy
+    }),
     //app
     AppRouterModule
   ],

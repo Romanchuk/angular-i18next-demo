@@ -18,7 +18,7 @@ export const providers = [
   FormBuilder,
   {
     provide: I18NEXT_NAMESPACE,
-    useValue: 'feature.rich_form'
+    useValue: ['not_existing_namespace', 'feature.rich_form']
   }
 ];
 

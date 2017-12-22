@@ -26,8 +26,8 @@ import { AccessDeniedComponent } from './content/access-denied/access-denied.com
 import { SimpleDemoComponent } from './content/simple-demo.component';
 
 const i18nextOptions = {
-  // whitelist: ['en', 'ru'],
-  // fallbackLng: 'en',
+  whitelist: ['en', 'ru'],
+  fallbackLng: 'en',
   debug: true, // set debug?
   returnEmptyString: false,
   ns: [

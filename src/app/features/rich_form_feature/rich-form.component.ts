@@ -1,7 +1,8 @@
-﻿import { RichFormModel } from './rich-form.model';
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+﻿import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { ValidationDirtyChecker } from '../../../lib/validation/services/ValidationDirtyChecker';
+import { RichFormModel } from './rich-form.model';
 
 @Component({
   selector: 'rich-form',

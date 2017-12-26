@@ -1,13 +1,13 @@
-
-import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
-import { I18NextModule, I18NEXT_NAMESPACE } from 'angular-i18next';
-import { ValidationModule } from '../../../lib/validation/ValidationModule';
-import { ValidationMessageModule } from '../../../lib/angular-validation-message/ValidationMessageModule';
-import { I18NextValidationMessageModule } from '../../../lib/angular-validation-message-i18next/I18NextValidationMessageModule';
-import { RichFormFeatureRouterModule } from './RichFormFeatureRouterModule';
+import { NgModule } from '@angular/core';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { I18NEXT_NAMESPACE, I18NextModule } from 'angular-i18next';
+import { ValidationMessageModule } from 'angular-validation-message';
+import { I18NextValidationMessageModule } from 'angular-validation-message-i18next';
+import { ValidationModule } from 'lib/validation/ValidationModule';
+
 import { RichFormComponent } from './rich-form.component';
+import { RichFormFeatureRouterModule } from './RichFormFeatureRouterModule';
 
 
 export const declarations = [

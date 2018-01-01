@@ -1,30 +1,28 @@
-import { NgModule, ApplicationRef, APP_INITIALIZER, LOCALE_ID } from '@angular/core';
+import { APP_INITIALIZER, ApplicationRef, LOCALE_ID, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
-
-import { AppRouterModule } from './routing/AppRouterModule';
-
-
-import { I18NextModule, I18NextService, I18NEXT_SERVICE, ITranslationService, I18NextLoadResult, StrictErrorHandlingStrategy, NativeErrorHandlingStrategy } from 'angular-i18next';
-import * as i18nextXHRBackend from 'i18next-xhr-backend';
+import { createInputTransfer, createNewHosts, removeNgStyles } from '@angularclass/hmr';
+import { I18NEXT_SERVICE, I18NextLoadResult, I18NextModule, ITranslationService } from 'angular-i18next';
+import { ValidationMessageModule } from 'angular-validation-message';
+import { I18NextValidationMessageModule } from 'angular-validation-message-i18next';
 import * as i18nextLanguageDetector from 'i18next-browser-languagedetector';
+import * as i18nextXHRBackend from 'i18next-xhr-backend';
+
+import { AppComponent } from './AppComponent';
+import { AccessDeniedComponent } from './content/access-denied/access-denied.component';
+import { SimpleDemoComponent } from './content/simple-demo.component';
+import { ENV_PROVIDERS } from './environment';
+import { AppRouterModule } from './routing/AppRouterModule';
+import { AppErrorComponent } from './structure/app-error.component';
+import { AppFooterComponent } from './structure/app-footer.component';
+import { AppHeaderComponent } from './structure/app-header.component';
+import { HeaderLanguageComponent } from './structure/header-controls/header.language.component';
+
 
 
 /*
  * Platform and Environment providers/directives/pipes
  */
-import { ENV_PROVIDERS } from './environment';
-
-import { AppComponent } from './AppComponent';
-import { AppHeaderComponent } from './structure/app-header.component';
-import { AppFooterComponent } from './structure/app-footer.component';
-import { AppErrorComponent } from './structure/app-error.component';
-import { HeaderLanguageComponent } from './structure/header-controls/header.language.component';
-import { AccessDeniedComponent } from './content/access-denied/access-denied.component';
-import { SimpleDemoComponent } from './content/simple-demo.component';
-
 const i18nextOptions = {
   whitelist: ['en', 'ru'],
   fallbackLng: 'en',
@@ -122,7 +120,9 @@ type StoreType = {
       // errorHandlingStrategy: StrictErrorHandlingStrategy
     }),
     //app
-    AppRouterModule
+    AppRouterModule,
+    ValidationMessageModule,
+    I18NextValidationMessageModule,
   ],
   exports: [
   ],

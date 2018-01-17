@@ -4,8 +4,8 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { I18NEXT_NAMESPACE, I18NextModule } from 'angular-i18next';
 import { ValidationMessageModule } from 'angular-validation-message';
 import { I18NextValidationMessageModule } from 'angular-validation-message-i18next';
-import { ValidationModule } from 'lib/validation/ValidationModule';
 
+import { ValidationModule } from '../../../lib/validation/ValidationModule';
 import { RichFormComponent } from './rich-form.component';
 import { RichFormFeatureRouterModule } from './RichFormFeatureRouterModule';
 

@@ -116,7 +116,6 @@ type StoreType = {
     FormsModule,
     //lib
     I18NextModule.forRoot({
-      localizeTitle: true,
       // errorHandlingStrategy: StrictErrorHandlingStrategy
     }),
     //app

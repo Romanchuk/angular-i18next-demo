@@ -18,8 +18,6 @@ import { AppFooterComponent } from './structure/app-footer.component';
 import { AppHeaderComponent } from './structure/app-header.component';
 import { HeaderLanguageComponent } from './structure/header-controls/header.language.component';
 
-
-
 /*
  * Platform and Environment providers/directives/pipes
  */

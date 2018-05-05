@@ -1,4 +1,4 @@
 # angular-i18next-demo
 angular-i18next demo (JiT + AoT)
 
-running on angular-i18next v3.0.0
+running on latest version of angular-i18next

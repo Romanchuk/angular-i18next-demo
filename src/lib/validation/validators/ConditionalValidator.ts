@@ -1,5 +1,5 @@
 import { Validator, AsyncValidatorFn, ValidatorFn, FormControl, FormGroup, FormArray, AbstractControl } from '@angular/forms';
-import 'rxjs/add/operator/distinctUntilChanged'; // fn distinctUntilChanged
+import { distinctUntilChanged } from 'rxjs/operators';
 
 // todo: доработать ConditionalValidator, чтобы он работал в связке с асинхронным валидатором (сейчас валится)
 
@@ -87,21 +87,23 @@ export class ConditionalValidator {
 function revalidateOnChanges(control: AbstractControl, trackParentOnly: Boolean = null): void {
   let parentControl = trackParentOnly ? control.parent : control.root;
   parentControl.valueChanges
-    .distinctUntilChanged((a, b) => {
-      // These will always be plain objects coming from the form, do a simple comparison
-      if (a && !b || !a && b) {
-        return false;
-      } else if (a && b && Object.keys(a).length !== Object.keys(b).length) {
-        return false;
-      } else if (a && b) {
-        for (let i in a) {
-          if (a[i] !== b[i]) {
+    .pipe(
+        distinctUntilChanged((a, b) => {
+          // These will always be plain objects coming from the form, do a simple comparison
+          if (a && !b || !a && b) {
             return false;
+          } else if (a && b && Object.keys(a).length !== Object.keys(b).length) {
+            return false;
+          } else if (a && b) {
+            for (let i in a) {
+              if (a[i] !== b[i]) {
+                return false;
+              }
+            }
           }
-        }
-      }
-      return true;
-    })
+          return true;
+        })
+    )
     .subscribe(() => {
       control.updateValueAndValidity({ onlySelf: true, emitEvent: false });
     });

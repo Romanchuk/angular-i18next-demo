@@ -9,8 +9,8 @@ import { Router,
 
 import { I18NEXT_SERVICE, ITranslationService } from 'angular-i18next';
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/filter';
+import { Observable } from 'rxjs';
+import { filter, map, mergeMap } from 'rxjs/operators';
 
 import 'assets/ng-validation.css';
 
@@ -34,14 +34,16 @@ export class AppComponent implements OnInit  {
       // page title subscription
       // https://toddmotto.com/dynamic-page-titles-angular-2-router-events#final-code
       this.router.events
-        .filter(event => event instanceof NavigationEnd)
-        .map(() => this.router.routerState.root)
-        .map(route => {
-          while (route.firstChild) route = route.firstChild;
-          return route;
-        })
-        .filter(route => route.outlet === 'primary')
-        .mergeMap(route => route.data)
+        .pipe(
+            filter(event => event instanceof NavigationEnd),
+            map(() => this.router.routerState.root),
+            map(route => {
+              while (route.firstChild) route = route.firstChild;
+              return route;
+            }),
+            filter(route => route.outlet === 'primary'),
+            mergeMap(route => route.data)
+        )
         .subscribe((event) => this.updatePageTitle(event['title']));
   }
 

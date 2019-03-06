@@ -182,7 +182,7 @@ module.exports = function (options) {
       new DefinePlugin({
         'ENV': JSON.stringify(ENV),
         'HMR': false,
-        'I18NEXT_LANG_COOKIE_DOMAIN': JSON.stringify('.eastbanctech.ru'),
+        'I18NEXT_LANG_COOKIE_DOMAIN': JSON.stringify('romanchuk.github.io'),
         'process.env': {
           'ENV': JSON.stringify(ENV),
           'NODE_ENV': JSON.stringify(ENV),

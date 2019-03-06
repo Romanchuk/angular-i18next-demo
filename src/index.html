@@ -10,7 +10,7 @@
     <title>
         <%= htmlWebpackPlugin.options.title %>
     </title>
-    <link rel="icon" type="image/ico" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/ico" href="assets/favicon.ico" />
     <!-- base url -->
     <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
 
@@ -23,31 +23,31 @@
     <% if (webpackConfig.htmlElements.headTags) { %>
         <!-- Configured Head Tags  -->
         <%= webpackConfig.htmlElements.headTags %>
-            <% } %>
+    <% } %>
 </head>
 
-<body class="s7-request-api">
+<body>
 
     <app>
         <style type="text/css">
             * {
                 outline: 0!important
             }
-            
+
             .app-loader {
                 display: table;
                 height: 100vh;
                 width: 100%
             }
-            
+
             .app-loader .loader-pusher {
                 display: table-cell;
                 text-align: center;
                 vertical-align: middle
             }
-            
+
             .app-loader .loader-pusher .spinner {
-                background: url('/assets/logo.svg') no-repeat 50% 50% #f2f2f2;
+                background: url('assets/logo.svg') no-repeat 50% 50% #f2f2f2;
                 background-size: 80%;
                 border-radius: 50%;
                 display: inline-block;
@@ -58,7 +58,7 @@
                 text-align: center;
                 color: #fff;
             }
-            
+
             .app-loader .loader-pusher .spinner .spinner-tail {
                 -webkit-animation: spinner .86s linear infinite;
                 animation: spinner .86s linear infinite;
@@ -69,7 +69,7 @@
                 right: -10px;
                 top: -10px;
             }
-            
+
             @-webkit-keyframes spinner {
                 0% {
                     -webkit-transform: rotate(0);
@@ -80,7 +80,7 @@
                     transform: rotate(360deg)
                 }
             }
-            
+
             @keyframes spinner {
                 0% {
                     -webkit-transform: rotate(0);
@@ -104,8 +104,8 @@
 
     <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
         <!-- Webpack Dev Server reload -->
-        <script src="/webpack-dev-server.js"></script>
-        <% } %>
+        <script src="webpack-dev-server.js"></script>
+    <% } %>
 
 
 </body>

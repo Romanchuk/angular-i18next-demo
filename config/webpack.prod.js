@@ -17,6 +17,7 @@ const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplaceme
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const V8LazyParseWebpackPlugin = require('v8-lazy-parse-webpack-plugin');
 /**
  * Webpack Constants
@@ -28,7 +29,8 @@ const METADATA = webpackMerge(commonConfig({env: ENV}).metadata, {
   host: HOST,
   port: PORT,
   ENV: ENV,
-  HMR: false
+  HMR: false,
+  baseUrl: '/angular-i18next-demo/'
 });
 
 module.exports = function (env) {
@@ -120,12 +122,28 @@ module.exports = function (env) {
       new DefinePlugin({
         'ENV': JSON.stringify(METADATA.ENV),
         'HMR': METADATA.HMR,
-        'I18NEXT_LANG_COOKIE_DOMAIN': JSON.stringify('.s7.ru'),
+        'I18NEXT_LANG_COOKIE_DOMAIN': JSON.stringify('romanchuk.github.io'),
         'process.env': {
           'ENV': JSON.stringify(METADATA.ENV),
           'NODE_ENV': JSON.stringify(METADATA.ENV),
           'HMR': METADATA.HMR,
         }
+      }),
+
+      /*
+      * Plugin: HtmlWebpackPlugin
+      * Description: Simplifies creation of HTML files to serve your webpack bundles.
+      * This is especially useful for webpack bundles that include a hash in the filename
+      * which changes every compilation.
+      *
+      * See: https://github.com/ampedandwired/html-webpack-plugin
+      */
+      new HtmlWebpackPlugin({
+          template: 'src/index.html',
+          title: METADATA.title,
+          chunksSortMode: 'dependency',
+          metadata: METADATA,
+          inject: 'head'
       }),
 
       /**

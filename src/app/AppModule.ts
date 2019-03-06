@@ -38,7 +38,7 @@ const i18nextOptions = {
   },
   //backend plugin options
   backend: {
-    loadPath: function(langs, ns) { // todo: перенести локали каждой фичи к ней в папку
+    loadPath: function(langs, ns) {
       return 'locales/{{lng}}.{{ns}}.json';
     }
   },

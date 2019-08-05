@@ -6,7 +6,7 @@ import { I18NEXT_SERVICE, I18NextLoadResult, I18NextModule, ITranslationService,
 import { ValidationMessageModule } from 'angular-validation-message';
 import { I18NextValidationMessageModule } from 'angular-validation-message-i18next';
 import * as i18nextLanguageDetector from 'i18next-browser-languagedetector';
-import * as i18nextXHRBackend from 'i18next-xhr-backend';
+import XHR from 'i18next-xhr-backend';
 
 import { AppComponent } from './AppComponent';
 import { AccessDeniedComponent } from './content/access-denied/access-denied.component';
@@ -38,9 +38,7 @@ const i18nextOptions = {
   },
   //backend plugin options
   backend: {
-    loadPath: function(langs, ns) {
-      return 'locales/{{lng}}.{{ns}}.json';
-    }
+    loadPath: '/locales/{{lng}}.{{ns}}.json'
   },
   // lang detection plugin options
   detection: {
@@ -62,7 +60,7 @@ const i18nextOptions = {
 export function appInit(i18next: ITranslationService) {
   return () => {
     let promise: Promise<I18NextLoadResult> = i18next
-      .use(i18nextXHRBackend)
+      .use(XHR)
       .use(i18nextLanguageDetector)
       .init(i18nextOptions);
     return promise;

@@ -38,7 +38,7 @@ const i18nextOptions = {
   },
   //backend plugin options
   backend: {
-    loadPath: '/locales/{{lng}}.{{ns}}.json'
+    loadPath: 'locales/{{lng}}.{{ns}}.json'
   },
   // lang detection plugin options
   detection: {

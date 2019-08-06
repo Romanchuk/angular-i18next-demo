@@ -3,8 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { createInputTransfer, createNewHosts, removeNgStyles } from '@angularclass/hmr';
 import { I18NEXT_SERVICE, I18NextLoadResult, I18NextModule, ITranslationService, defaultInterpolationFormat } from 'angular-i18next';
-import { ValidationMessageModule } from 'angular-validation-message';
-import { I18NextValidationMessageModule } from 'angular-validation-message-i18next';
+import { I18NextValidationMessageModule } from 'angular-validation-message';
+
 import * as i18nextLanguageDetector from 'i18next-browser-languagedetector';
 import XHR from 'i18next-xhr-backend';
 
@@ -116,8 +116,7 @@ type StoreType = {
     }),
     //app
     AppRouterModule,
-    ValidationMessageModule,
-    I18NextValidationMessageModule,
+    I18NextValidationMessageModule
   ],
   exports: [
   ],

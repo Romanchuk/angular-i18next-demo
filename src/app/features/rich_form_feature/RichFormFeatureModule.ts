@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { I18NEXT_NAMESPACE, I18NextModule } from 'angular-i18next';
-import { ValidationMessageModule } from 'angular-validation-message';
-import { I18NextValidationMessageModule } from 'angular-validation-message-i18next';
-
+import { I18NextModule, I18NEXT_NAMESPACE } from 'angular-i18next';
+import { I18NextValidationMessageModule } from 'angular-validation-message';
 import { ValidationModule } from '../../../lib/validation/ValidationModule';
 import { RichFormComponent } from './rich-form.component';
 import { RichFormFeatureRouterModule } from './RichFormFeatureRouterModule';
+
+
 
 
 export const declarations = [
@@ -37,7 +37,6 @@ export const providers = [
     //lib
     I18NextModule,
     ValidationModule,
-    ValidationMessageModule,
     I18NextValidationMessageModule,
   ]
 })

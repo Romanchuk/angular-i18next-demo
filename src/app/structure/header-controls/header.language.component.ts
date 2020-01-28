@@ -6,7 +6,7 @@ import { Component, ViewEncapsulation, Inject } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
   templateUrl: './header.language.component.html',
   styles: [`
-    
+
   `]
 })
 export class HeaderLanguageComponent {

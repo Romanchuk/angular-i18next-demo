@@ -78,7 +78,7 @@
         "@angularclass/hmr": "^1.2.2",
         "@angularclass/hmr-loader": "^3.0.4",
         "angular-i18next": "8.0.0",
-        "angular-validation-message": "^2.0.1",
+        "angular-validation-message": "3.0.1",
         "assets-webpack-plugin": "^3.5.1",
         "core-js": "^2.5.1",
         "http-server": "^0.9.0",

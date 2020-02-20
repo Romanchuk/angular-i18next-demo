@@ -48,6 +48,7 @@ export class AppComponent implements OnInit  {
   }
 
   ngOnInit() {
+    console.log('Default test: ' + this.i18NextService.t('not_exists', 'default'));
     console.log('Initial App State', 0);
     this.i18NextService.events.languageChanged.subscribe(lang => {
       let root = this.router.routerState.root;

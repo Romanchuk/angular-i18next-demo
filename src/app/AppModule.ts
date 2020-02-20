@@ -5,7 +5,7 @@ import { createInputTransfer, createNewHosts, removeNgStyles } from '@angularcla
 import { I18NEXT_SERVICE, I18NextLoadResult, I18NextModule, ITranslationService, defaultInterpolationFormat } from 'angular-i18next';
 import { I18NextValidationMessageModule } from 'angular-validation-message';
 
-import * as i18nextLanguageDetector from 'i18next-browser-languagedetector';
+import LanguageDetector from 'i18next-browser-languagedetector';
 import XHR from 'i18next-xhr-backend';
 
 import { AppComponent } from './AppComponent';
@@ -61,7 +61,7 @@ export function appInit(i18next: ITranslationService) {
   return () => {
     let promise: Promise<I18NextLoadResult> = i18next
       .use(XHR)
-      .use(i18nextLanguageDetector)
+      .use<any>(LanguageDetector)
       .init(i18nextOptions);
     return promise;
   };

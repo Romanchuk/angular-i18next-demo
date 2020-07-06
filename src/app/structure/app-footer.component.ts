@@ -10,7 +10,7 @@ export class AppFooterComponent {
   i18nextVersion: string = '0.0.0';
   constructor(){
     this.angularVersion = VERSION.full;
-    this.i18nextVersion = '19.4.4'; // todo: get version automaticaly
+    this.i18nextVersion = '19.5.4'; // todo: get version automaticaly
   }
 
 }

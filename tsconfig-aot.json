@@ -20,10 +20,8 @@
             "../node_modules/@types"
         ],
         "types": [
-            "hammerjs",
             "jasmine",
             "node",
-            "selenium-webdriver",
             "source-map",
             "uglify-js",
             "webpack"

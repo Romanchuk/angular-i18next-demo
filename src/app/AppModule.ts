@@ -6,7 +6,7 @@ import { I18NEXT_SERVICE, I18NextLoadResult, I18NextModule, ITranslationService,
 import { I18NextValidationMessageModule } from 'angular-validation-message';
 
 import LanguageDetector from 'i18next-browser-languagedetector';
-import XHR from 'i18next-xhr-backend';
+import HttpApi from 'i18next-http-backend';
 
 import { AppComponent } from './AppComponent';
 import { AccessDeniedComponent } from './content/access-denied/access-denied.component';
@@ -60,7 +60,7 @@ const i18nextOptions = {
 export function appInit(i18next: ITranslationService) {
   return () => {
     let promise: Promise<I18NextLoadResult> = i18next
-      .use(XHR)
+      .use(HttpApi)
       .use<any>(LanguageDetector)
       .init(i18nextOptions);
     return promise;

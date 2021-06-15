@@ -149,7 +149,7 @@
         "v8-lazy-parse-webpack-plugin": "^0.3.0",
         "webpack": "^3.8.1",
         "webpack-dev-middleware": "^1.10.1",
-        "webpack-dev-server": "^2.9.4",
+        "webpack-dev-server": "^3.1.11",
         "webpack-md5-hash": "^0.0.5",
         "webpack-merge": "^4.1.1"
     },
